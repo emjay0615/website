@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  --green: #27ae60;
+  --black: #192a56;
+  --light-color: #666;
+  --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  --pink: #ffcad7;
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+section {
+  padding: 4rem 9%;
+}
+
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #fff;
+  padding: 1rem 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+
+/* ✅ Center navigation links */
+header .navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;  /* ✅ centers HOME, ABOUT, MENU, DISHES */
+  align-items: center;
+  gap: 2rem;
+}
+
+header .logo img {
+  width: 75px;
+  height: auto;
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  color: var(--light-color);
+}
+
+header .navbar a:hover {
+  color: #fff;
+  background: var(--pink);
+}
+
+header .icons i {
+  cursor: pointer;
+  margin-left: .5rem;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--black);
+  border-radius: 50%;
+  background: #eee;
+}
+
+header .icons i:hover {
+  background: var(--pink);
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+header .icons #menu-bars {
+  display: none;
+}
+
+/* ✅ Promo Section */
+.offers {
+  background: #f8f9fa;
+  padding: 6rem 2rem;
+  text-align: center;
+  margin-top: 8rem; /* to avoid overlap with fixed header */
+}
+
+.offer-content h2 {
+  font-size: 3rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.offer-content p {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.order-btn {
+  background: var(--pink);
+  color: #fff;
+  padding: 1rem 3rem;
+  border-radius: .8rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #df58ab;
+  transform: scale(1.05);
+}
+
+.offer-nav {
+  display: flex;
+  justify-content: center;   /* ✅ centers all buttons */
+  align-items: center;       /* ✅ vertically aligns them */
+  gap: 1.2rem;               /* ✅ nice even space between each */
+  flex-wrap: wrap;           /* ✅ keeps them responsive */
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: 100%;
+  background: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* optional soft shadow */
+  position: sticky;
+  top: 99px;  /* adjust depending on header height */
+  z-index: 100;
+}
+
+
+.offer-nav a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--black);
+  padding: 0.8rem 2rem;
+  border-radius: 0.6rem;
+  background: #eee;
+  transition: 0.3s;
+  text-align: center;
+  min-width: 100px; /* ✅ consistent button width */
+}
+
+.offer-nav a:hover,
+.offer-nav a.active {
+  background: var(--pink);
+  color: #fff;
+}
+
+
+/* Grid already responsive */
+.dishes .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 1.5rem;
+}
+
+.dishes .box {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dishes .box.hidden {
+  display: none;  /* ✅ this removes space completely */
+}
+
+
+/* ✅ Dishes Section */
+.sub-heading {
+  text-align: center;
+  color: #27ae60; /* green accent */
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.dishes {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.dishes .heading {
+  font-size: 3rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.dishes .box-container {
+  display: grid;
+  grid-template-columns: repeat(5, 230px); /* exactly 5 boxes per row */
+  justify-content: center; /* ✅ centers the boxes if fewer than 5 */
+  gap: 1.5rem; /* space between boxes */
+  width: 100%;
+  margin: 0 auto;
+}
+.dishes .box {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  width: 230px;
+}
+
+.dishes .box:hover {
+  transform: translateY(-5px);
+}
+
+.dishes .box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dishes .box:hover img {
+  transform: scale(1.05);
+}
+
+.dishes .box h3 {
+  font-size: 1.9rem;
+  color: #192a56;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dishes .box p {
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.dishes .box span {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #27ae60;
+  margin: 0 0.3rem;
+}
+
+.dishes .box span + span::before {
+  content: "•";
+  color: #27ae60;
+  margin-right: 0.3rem;
+}
+
+/* Optional: view-all button style */
+.dishes .view-all {
+  display: inline-block;
+  background: #27ae60;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  transition: background 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.dishes .view-all:hover {
+  background: #219150;
+}
+
+/* Smooth hide effect for filtering (optional) */
+.dishes .box.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.footer {
+  background: #2b1d18; /* dark brown background */
+  color: #ddd;
+  padding: 3rem 2rem 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-box h3 {
+  font-size: 1.4rem;
+  color: #ffbd13; /* yellow accent */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-box p, 
+.footer-box a {
+  font-size: 1.2rem;
+  color: #ccc;
+  display: block;
+  margin: 0.3rem 0;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #ffbd13;
+  text-decoration: underline;
+}
+
+.footer-box iframe {
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  color: #ccc;
+  font-size: 1.4rem;
+  margin-right: 0.8rem;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffbd13;
+}
+
+.footer .credit {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.footer .credit span {
+  color: #ffbd13;
+  font-weight: 600;
+}
+
+.app-buttons {
+  margin-top: 1rem;
+}
+
+.app-buttons .download {
+  display: inline-block;
+  background: #ffbd13;
+  color: #2b1d18;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.app-buttons .download:hover {
+  background: #f7a800;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-links a {
+    margin: 0 0.5rem;
+  }
+}
+
+/* ✅ Responsive */
+@media (max-width: 991px) {
+  html { font-size: 55%; }
+  header { padding: 1rem 2rem; }
+  section { padding: 3rem; }
+}
+
+@media (max-width: 768px) {
+  header .icons #menu-bars { display: inline-block; }
+
+  header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border-top: .1rem solid rgba(0,0,0,.2);
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+  }
+
+  header .navbar.active {
+    display: flex;
+  }
+
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    background: #eee;
+  }
+}
