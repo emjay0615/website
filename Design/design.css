@@ -648,6 +648,133 @@ textarea {
     margin: 0 1rem;
   }
 }
+/* ================= Discover Our Story Section (Cantina Style) ================= */
+.about-story {
+  padding: 5rem 9%;
+  background-color: var(--light);
+  color: #fff;
+  text-align: center;
+}
+
+.about-story .story-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--green);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.about-story .story-intro {
+  color: var(--black);
+  font-size: 1.1rem;
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.about-story .highlight {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.story-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.story-card {
+  background: #f8fff9;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.08);
+  flex: 1 1 350px;
+  max-width: 380px;
+  padding: 2rem;
+  height: 330px; /* ✅ makes it more box-like */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #e6f3e9;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.story-card h3 {
+  color: var(--green);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.story-card p {
+  color: var(--light-color);
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.why-choose {
+  background: #f9fff9;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.08);
+}
+
+.why-choose h3 {
+  color: var(--green);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.choose-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.choose-box {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem;
+  flex: 1 1 280px;
+  max-width: 300px;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.05);
+  border: 2px solid #e6f3e9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.choose-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.choose-box h4 {
+  color: var(--black);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.choose-box h4 i {
+  color: var(--green);
+  font-size: 1.3rem;
+}
+
+.choose-box p {
+  color: var(--light-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 
 
 
