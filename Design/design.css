@@ -242,7 +242,7 @@ header .icons i:hover {
 .home .swiper-slide img {
   width: 100%;
   height: auto;
-  max-height: 550px; 
+  max-height: 570px; 
   object-fit: cover;
   object-position: center;
   display: block;
@@ -331,7 +331,7 @@ header .icons i:hover {
 
 
 .app-buttons .download{
-position: absolute;
+
 font-size: 1rem;
 font-weight: bold;
 
@@ -658,7 +658,6 @@ textarea {
 
 
   header {
-    flex-direction: column;
     padding: 1.5rem 1rem; 
     height: auto; 
   }

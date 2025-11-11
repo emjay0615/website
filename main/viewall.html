@@ -19,10 +19,7 @@
     <a href="#dishes">DISHES</a>
   </nav>
 
-  <div class="icons">
-    <i class="fas fa-bars" id="menu-bars"></i>
 
-  </div>
 </header>
 
 
@@ -44,7 +41,7 @@
   <div class="box-container">
 
 
-    <!-- ✅ Pizza (10) -->
+
     <div class="box" data-category="pork"><img src="/Image/shanghai.jpg"><h3>Pork Lumpiang Shanghai</h3><span>₱600</span></div>
     <div class="box" data-category="pork"><img src="/Image/karikari.jpg"><h3>Crsipy Kare-Kare </h3><span>₱700</span></div>
     <div class="box" data-category="pork"><img src="/Image/porkmenudo.jpg"><h3>Pork Menudo</h3><span>₱750</span></div>
@@ -52,16 +49,16 @@
     <div class="box" data-category="pork"><img src="/Image/letchon.jpg"><h3>Lechon Kawali</h3><span>₱1080</span></div>
     <div class="box" data-category="pork"><img src="/Image/sisig.jpg"><h3>Crispy Pork Sisig</h3><span>₱1080</span></div>
     
-    <!-- ✅ Chicken (10) -->
+
     <div class="box" data-category="chicken"><img src="/Image/sad.jpg"><h3>Chicken Lollipop</h3><span>₱600</span></div>
     <div class="box" data-category="chicken"><img src="/Image/testing.jpg"><h3>Cordon Bleu</h3><span>₱650</span></div>
 
-    <!-- ✅ Burger (10) -->
+ 
     <div class="box" data-category="beef"><img src="/Image/beefcal.jpg"><h3>Beef Caldereta</h3><span>₱1200</span></div>
     <div class="box" data-category="beef"><img src="/Image/beefkare.jpg"><h3>Beef Kare-Kare</h3><span>₱1200</span></div>
     <div class="box" data-category="beef"><img src="/Image/roastedbeef.jpg"><h3>Big Burger 3</h3><span>₱1200</span></div>
 
-    <!-- ✅ More (10) -->
+    
 
     <div class="box" data-category="more"><img src="/Image/hipon.jpg"><h3>Butter-Garlic Shrimp</h3><span>₱750</span></div>
     <div class="box" data-category="more"><img src="/Image/breaded.jpg"><h3>Breaded Fish Fillet</h3><span>₱745</span></div>
@@ -78,7 +75,6 @@
 </section>
 
 
-<!-- ================= Footer ================= -->
 <section class="footer" id="about">
   <div class="footer-container">
 
@@ -125,17 +121,6 @@
 <script src="responsiveIcon.js"></script>
 <script>
 
-    let menu = document.querySelector('#menu-bars');
-  let navbar = document.querySelector('.navbar');
-
-  menu.onclick = () => {
-    // This line toggles the "fa-times" class on the icon, changing it to an "X"
-    menu.classList.toggle('fa-times');
-    // This line toggles the "active" class on the navbar, which makes it appear or disappear
-    navbar.classList.toggle('active');
-  }
-  // ✅ END: MENU BAR SCRIPT
-
   const categoryLinks = document.querySelectorAll(".offer-nav a");
   const boxes = document.querySelectorAll(".dishes .box");
 
@@ -143,7 +128,7 @@
     link.addEventListener("click", e => {
       e.preventDefault();
 
-      // highlight active link
+
       categoryLinks.forEach(l => l.classList.remove("active"));
       link.classList.add("active");
 

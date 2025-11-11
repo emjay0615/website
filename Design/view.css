@@ -20,37 +20,35 @@
   transition: all .2s linear;
 }
 
-html {
-  height: 100%;
-  font-size: 62.5%;
+body{
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 70%;
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem; 
+  scroll-padding-top: 5.5rem;
+  overflow-x: hidden;
 }
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-top: 7rem; 
-}
-
 
 section {
   padding: 4rem 9%;
 }
 
 header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #fff;
   padding: 1rem 7%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 1000;
   box-shadow: var(--box-shadow);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 
@@ -79,45 +77,23 @@ header .navbar a:hover {
   background: var(--pink);
 }
 
-header .icons i {
-  cursor: pointer;
-  margin-left: .5rem;
-  height: 4rem;
-  width: 4rem;
-  line-height: 4rem;
-  text-align: center;
-  font-size: 1.7rem;
-  color: var(--black);
-  border-radius: 50%;
-  background: #eee;
-}
-
-header .icons i:hover {
-  background: var(--pink);
-  color: #fff;
-  transform: rotate(45deg);
-}
-
-header .icons #menu-bars {
-  display: none;
-}
 
 
 
 .offer-nav {
   display: flex;
-  justify-content: center;  
-  align-items: center;      
-  gap: 1.2rem;              
-  flex-wrap: wrap;          
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
   padding: 1rem 2%;
-  margin: 0 auto;
-  width: 100%;
-  background: #f8f9fa;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+  background: #fff;
+ 
   position: sticky;
-  top: 9rem; 
-  z-index: 999;
+  top: 89px; /* adjust depending on header height */
+  z-index: 1000;
+  width: 100%;
+  max-width: 100%;
 }
 
 
@@ -130,7 +106,7 @@ header .icons #menu-bars {
   background: #eee;
   transition: 0.3s;
   text-align: center;
-  min-width: 100px; 
+  white-space: nowrap;
 }
 
 .offer-nav a:hover,
@@ -139,7 +115,54 @@ header .icons #menu-bars {
   color: #fff;
 }
 
+.app-buttons .download{
 
+font-size: 1rem;
+font-weight: bold;
+
+}
+
+.app-buttons .download:hover{
+text-decoration: underline;
+color: black;
+}
+
+z
+
+.app-buttons {
+  margin-top: 1rem;
+}
+
+.app-buttons .download {
+  display: inline-block;
+  background: #ffbd13;
+  color: #2b1d18;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.app-buttons .download:hover {
+  background: #f7a800;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer .credit {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.footer .credit span {
+  color: #ffbd13;
+  font-weight: 600;
+}
 
 .sub-heading {
   text-align: center;
@@ -290,35 +313,35 @@ header .icons #menu-bars {
 }
 
 @media (max-width: 768px) {
-  header .icons #menu-bars { display: inline-block; }
+
+  header {
+    padding: 1.5rem 1rem; 
+    height: auto; 
+  }
+
 
   header .navbar {
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: #fff;
-    border-top: .1rem solid rgba(0,0,0,.2);
-    border-bottom: .1rem solid rgba(0,0,0,.2);
-    padding: 1rem;
-    display: none;
-    flex-direction: column;
+    margin-top: 1.5rem; 
+    padding-bottom: 0.5rem;
+    width: 100%; 
+    
+ 
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    gap: 1rem; 
   }
 
-  header .navbar.active {
-    display: flex;
-  }
 
   header .navbar a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    font-size: 2rem;
-    background: #eee;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.6rem; 
   }
+
   
   .offer-nav {
     gap: 0.8rem; 
+    top: 11.5rem;
   }
   
   .offer-nav a {
