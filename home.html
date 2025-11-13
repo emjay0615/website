@@ -57,7 +57,7 @@
       <!-- ================= Dishes Section ================= -->
 <section class="dishes" id="dishes">
   <h1 class="heading">popular <span>dishes</span></h1>
-  <a href="/main/viewall.html" class="view-all">View all</a>
+  <a href="viewall.html" class="view-all">View all</a>
 
   <div class="box-container">
     <div class="box">
@@ -118,13 +118,13 @@
   <h2 class="menu-title">Our Menu</h2>
 
   <div class="menu-triangle">
-    <div class="menu-row-top">
-      <div class="mt-item"><img src="/Image/bundle1.jpg" alt="Menu 1"></div>
-      <div class="mt-item"><img src="/Image/bundle2.jpg" alt="Menu 2"></div>
-    </div>
-
-    <div class="menu-row-bottom">
-      <div class="mt-item"><img src="/Image/MENU.png" alt="Menu 3"></div>
+    <div class="menu-grid">
+      <div class="mt-item"><img src="/Image/chaofan.jpg" alt="Menu 3"></div>
+      <div class="mt-item"><img src="/Image/salad.jpg" alt="Menu 3"></div>
+      <div class="mt-item"><img src="/Image/heavymeal.jpg" alt="Menu 3"></div>  
+      <div class="mt-item"><img src="/Image/updatedmenu.jpg" alt="Menu 1"></div>
+      <div class="mt-item"><img src="/Image/update2.jpg" alt="Menu 2"></div>
+      <div class="mt-item"><img src="/Image/updated3.jpg" alt="Menu 3"></div>
     </div>
   </div>
 </section>
@@ -230,24 +230,21 @@
 
       <!-- ================= Scripts ================= -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="andito.js"></script>
       <script>
-        // Initialize Swiper
-        var swiper = new Swiper('.home-slider', {
-          loop: true,
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
+        // ===== Swiper Slider =====
+const swiper = new Swiper(".home-slider", {
+  spaceBetween: 0,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
+});
       </script>
     </body>
 </html>
