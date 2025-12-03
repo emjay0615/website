@@ -127,7 +127,7 @@ text-decoration: underline;
 color: black;
 }
 
-z
+
 
 .app-buttons {
   margin-top: 1rem;
@@ -137,7 +137,7 @@ z
   display: inline-block;
   background: #ffbd13;
   color: #2b1d18;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   text-decoration: none;
