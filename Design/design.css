@@ -654,24 +654,18 @@ header .icons i:hover {
 
 .app-buttons {
   margin-top: 1rem;
+  width: 200px;
+  height: 50px;
 }
 
-.app-buttons .download {
-  display: inline-block;
-  background: #ffbd13;
-  color: #2b1d18;
-  font-weight: 500;
-  padding: 0.8rem 1.6rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
+.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
-.app-buttons .download:hover {
-  background: #f7a800;
-  color: #fff;
-  transform: translateY(-3px);
-}
 
 
 /* ================= RESPONSIVE DESIGN ================= */
@@ -1509,7 +1503,7 @@ header .icons i:hover {
 
 .footer .credit {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #aaa;
   border-top: 1px solid rgba(255,255,255,0.1);
   margin-top: 2rem;
@@ -1520,6 +1514,21 @@ header .icons i:hover {
   color: #ffbd13;
   font-weight: 600;
 }
+
+
+.app-buttons .download{
+
+font-size: 1rem;
+font-weight: bold;
+
+}
+
+.app-buttons .download:hover{
+text-decoration: underline;
+color: black;
+}
+
+
 
 .app-buttons {
   margin-top: 1rem;
@@ -1541,7 +1550,6 @@ header .icons i:hover {
   color: #fff;
   transform: translateY(-3px);
 }
-
 /* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 1200px) {
   .home .swiper-slide img {
@@ -1655,9 +1663,7 @@ header .icons i:hover {
     border-radius: 10px;
   }
 
-  .app-buttons .download {
-    font-size: 2rem;
-  }
+
   
   html {
     font-size: 50%;
