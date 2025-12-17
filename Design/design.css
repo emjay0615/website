@@ -654,28 +654,17 @@ header .icons i:hover {
 
 .app-buttons {
   margin-top: 1rem;
-  width: 200px;
-  height: 50px;
-}
-
-.button-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
 }
 
 .app-buttons .download {
+  display: inline-block;
   background: #ffbd13;
   color: #2b1d18;
-  width: 100%;
-  height: 50px;
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s;
-  align-content: center;
-
 }
 
 .app-buttons .download:hover {
@@ -683,6 +672,7 @@ header .icons i:hover {
   color: #fff;
   transform: translateY(-3px);
 }
+
 
 /* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 1200px) {
