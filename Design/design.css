@@ -654,17 +654,28 @@ header .icons i:hover {
 
 .app-buttons {
   margin-top: 1rem;
+  width: 200px;
+  height: 50px;
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .app-buttons .download {
-  display: inline-block;
   background: #ffbd13;
   color: #2b1d18;
-  font-weight: 700;
-  padding: 0.8rem 1.6rem;
+  width: 100%;
+  height: 50px;
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s;
+  align-content: center;
+
 }
 
 .app-buttons .download:hover {
@@ -1652,6 +1663,10 @@ header .icons i:hover {
   .home .swiper-slide img {
     max-height: 200px;
     border-radius: 10px;
+  }
+
+  .app-buttons .download {
+    font-size: 2rem;
   }
   
   html {
