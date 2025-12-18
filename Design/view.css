@@ -121,33 +121,45 @@ font-size: 1rem;
 font-weight: bold;
 
 }
-
-.app-buttons .download:hover{
-text-decoration: underline;
-color: black;
+.app-buttons,
+.app-buttons2 {
+  margin-top: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.app-buttons {
-  margin-top: 1rem;
-}
-
-.app-buttons .download {
-  display: inline-block;
+/* Shared button style */
+.app-buttons .download,
+.app-buttons2 .download {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background: #ffbd13;
   color: #2b1d18;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.2rem;
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
-.app-buttons .download:hover {
+/* Hover effect */
+.app-buttons .download:hover,
+.app-buttons2 .download:hover {
   background: #f7a800;
   color: #fff;
   transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Footer mobile alignment */
+@media (max-width: 768px) {
+  .app-buttons,
+  .app-buttons2 {
+    justify-content: center;
+  }
 }
 
 .footer .credit {
